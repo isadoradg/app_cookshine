@@ -15,11 +15,8 @@ class _TelaHomeState extends State<TelaHome> {
     return Scaffold(
       
       appBar: AppBar(
-        
         title: Text("COOKSHINE", style: TextStyle( color: Colors.black), textAlign: TextAlign.center,),
-        
         leading: Image.asset('lib/images/icon_kitchen_gradient.png',height: 30,width: 30,),
-        
         backgroundColor: Color.fromARGB(255, 246, 244, 243),
         
         actions: [
