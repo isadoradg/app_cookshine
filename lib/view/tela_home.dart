@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
 import "package:flutter/material.dart";
 
@@ -16,14 +16,31 @@ class _TelaHomeState extends State<TelaHome> {
       
       appBar: AppBar(
         
-        title: Text("COOKSHINE", style: TextStyle( color: Colors.black),),
-        /*Row(
-          children: [
-            Image.asset('lib/images/icon_kitchen_gradient.png'),
-            Text("COOKSHINE", style: TextStyle( color: Colors.black),),
-          ]
-        ),*/
+        title: Text("COOKSHINE", style: TextStyle( color: Colors.black), textAlign: TextAlign.center,),
+        
+        leading: Image.asset('lib/images/icon_kitchen_gradient.png',height: 30,width: 30,),
+        
         backgroundColor: Color.fromARGB(255, 246, 244, 243),
+        
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pushNamed(context, '/login'),
+            child: Row(children: [
+              Text("HOME", style: TextStyle( color: Colors.black),)
+            ],)),
+          TextButton(
+            onPressed: () => Navigator.pushNamed(context, '/login'),
+            child: Row(children: [
+              Text("SOBRE", style: TextStyle( color: Colors.black),)
+            ],)),
+          TextButton(
+            onPressed: () => Navigator.pushNamed(context, '/login'),
+            child: Row(children: [
+              Text("LOGIN", style: TextStyle( color: Colors.black),)
+            ],)),
+            
+            
+        ],
       
       ),
       
