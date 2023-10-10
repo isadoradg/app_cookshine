@@ -104,7 +104,7 @@ class _TelaLoginState extends State<TelaLogin> {
                 SizedBox(height: 10,),
 
                 TextButton(
-                  onPressed:() => Navigator.pop(context),
+                  onPressed:() => Navigator.pushNamed(context, '/esqueceu-a-senha'),
                   child: Text( "ESQUECEU A SENHA?", 
                     style: TextStyle( 
                       color: Colors.black,
