@@ -21,12 +21,12 @@ class _TelaHomeState extends State<TelaHome> {
         
         actions: [
           TextButton(
-            onPressed: () => Navigator.pushNamed(context, '/login'),
+            onPressed: () => Navigator.pushNamed(context, '/cookshine'),
             child: Row(children: [
               Text("HOME", style: TextStyle( color: Colors.black),)
             ],)),
           TextButton(
-            onPressed: () => Navigator.pushNamed(context, '/login'),
+            onPressed: () => Navigator.pushNamed(context, '/cookshine'),
             child: Row(children: [
               Text("SOBRE", style: TextStyle( color: Colors.black),)
             ],)),
