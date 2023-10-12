@@ -149,10 +149,11 @@ class _TelaLoginState extends State<TelaLogin> {
                     onPressed: () {
                       if(_formKeyLogin.currentState!.validate()){
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text("Processando os dados"),)
+                          const SnackBar(content: Text("Seus dados foram validados :)"),)
                         );
                         controlEmail.clear();
                         controlPassword.clear();
+                        Navigator.pushNamed(context, "/sobre");
                       }
                     },
       
