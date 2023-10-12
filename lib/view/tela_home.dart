@@ -36,7 +36,6 @@ class _TelaHomeState extends State<TelaHome> {
               Text("LOGIN", style: TextStyle( color: Colors.black),)
             ],)),
             
-            
         ],
       
       ),
