@@ -159,12 +159,13 @@ class _TelaCadastroState extends State<TelaCadastro> {
                     ),
                     onPressed: () {
                       if(_formKeyCadastro.currentState!.validate()){
+                        Navigator.pop(context);
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text("Seus dados foram validados :)"),)
                         );
                         controlEmail.clear();
                         controlPassword.clear();
-                        Navigator.pushNamed(context, "/sobre");
+                        Navigator.pushNamed(context, "/home");
                       }
                     },
                   ),
