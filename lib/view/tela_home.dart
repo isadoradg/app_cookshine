@@ -70,16 +70,36 @@ class _TelaHomeState extends State<TelaHome> {
               ),
               SizedBox(height: 20,),
               
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [ 
-                  Text("Mas por enquanto, entre ou cadastre-se para ver se a encontra por lá! E que tal testar uma nova receita também?", 
+                children: [
+                  Text("Mas por enquanto, entre ou cadastre-se para ver se a encontra", 
                     style: TextStyle( 
                       color: Colors.black
                     ),
                   ), 
-                ]
+                  Text("por lá! E que tal testar uma nova receita também?", 
+                    style: TextStyle( 
+                      color: Colors.black
+                    ),
+                  ),
+                ],
               ),
+              /*Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [ 
+                  Text("Mas por enquanto, entre ou cadastre-se para ver se a encontra", 
+                    style: TextStyle( 
+                      color: Colors.black
+                    ),
+                  ), 
+                  Text("por lá! E que tal testar uma nova receita também?", 
+                    style: TextStyle( 
+                      color: Colors.black
+                    ),
+                  ),
+                ]
+              ),*/
             ],
           ),
         ),
