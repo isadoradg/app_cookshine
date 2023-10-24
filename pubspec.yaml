@@ -20,4 +20,5 @@ flutter:
 
   assets:
     - lib/images/
+    - lib/data/
 
