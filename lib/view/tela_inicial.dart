@@ -24,8 +24,12 @@ class _TelaInicialState extends State<TelaInicial> {
 
         actions: <Widget>[
           
-          //Icon(Icons.person, ),
-          DropdownButton<String>(
+          IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: () => Navigator.pop(context),
+            color: Colors.black, 
+          ),
+          /*DropdownButton<String>(
             value: dropDown, 
             //icon: Icon(Icons., ),
             onChanged: (String? newValue){
@@ -34,20 +38,20 @@ class _TelaInicialState extends State<TelaInicial> {
               });
             },
             items: [
-              DropdownMenuItem(
+              /*DropdownMenuItem(
                 value: "<home>",
                 child: Text("Home"),//Icon(Icons.person, color: Colors.black),//Text(),
                 onTap: () {
-                  //Navigator.pop(context);
+                  Navigator.pushNamed(context, '/home');
                 },
               ),
               DropdownMenuItem(
                 value: "<user>",
                 child: Text("Perfil"),
                 onTap: () {
-                  //Navigator.pop(context);
+                  Navigator.pushNamed(context, '/perfil');
                 },
-              ),
+              ),*/
               DropdownMenuItem(
                 value: "<sair>",
                 child: Text("Sair"),
@@ -56,7 +60,7 @@ class _TelaInicialState extends State<TelaInicial> {
                 },
               )
             ],
-          )
+          )*/
 
         ],
       ),
@@ -83,13 +87,27 @@ class _TelaInicialState extends State<TelaInicial> {
                       Navigator.pushNamed(context, '/favoritos');
                     },
                   ),
-                  /*ListTile(
-                    leading: Icon(Icons.settings),
-                    title: Text("C O N F I G U R A Ç Õ E S"),
-                    onTap: (){  
-
+                  ListTile(
+                    leading: Icon(Icons.search),
+                    title: Text("P E S Q U I S A R"),
+                    onTap: (){
+                      Navigator.pushNamed(context, '/buscar');
                     },
-                  ),*/
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.abc),
+                    title: Text("MY STEPS"),
+                    onTap: (){
+                      Navigator.pushNamed(context, '/criar-receita');
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.settings),
+                    title: Text("P E R F I L"),
+                    onTap: (){  
+                      Navigator.pushNamed(context, '/perfil');
+                    },
+                  ),
                   ListTile(
                     leading: Icon(Icons.abc),
                     title: Text("S O B R E"),
