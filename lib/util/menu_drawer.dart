@@ -3,6 +3,9 @@
 //import "dart:js";
 
 //import "package:app_cookshine/util/constraints.dart";
+
+// VERIFICAR FORMAS DE FAZER O DRAWER
+// ESSE ARQUIVO ESTÁ EM REFORMA, VERIFIQUE O DRAWER DA PÁGINA TELA_HOME!
 import "package:flutter/material.dart";
 
 var drawerMenu = Drawer(
