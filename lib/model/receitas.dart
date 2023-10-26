@@ -23,8 +23,6 @@ class Receitas {
         //j['link_imagem'],
     );
   }
-
-
   
 }
 
