@@ -4,6 +4,9 @@ import 'package:app_cookshine/view/tela_cadastro.dart';
 import 'package:app_cookshine/view/tela_esqueceu_senha.dart';
 import 'package:app_cookshine/view/tela_favoritos.dart';
 import 'package:app_cookshine/view/tela_inicial.dart';
+import 'package:app_cookshine/view/tela_my_steps.dart';
+import 'package:app_cookshine/view/tela_perfil.dart';
+import 'package:app_cookshine/view/tela_pesquisa.dart';
 import 'package:app_cookshine/view/tela_receitas.dart';
 import 'package:app_cookshine/view/tela_receitas_detalhes.dart';
 import 'package:app_cookshine/view/tela_sobre.dart';
@@ -28,9 +31,10 @@ void main() {
       '/receitas': (context) => TelaReceitas(),
       '/receitas-detalhes': (context) => TelaReceitasDetalhes(),
       '/favoritos': (context) => TelaFavoritos(),
+      '/perfil':(context) => TelaPerfil(),
+      '/criar-receita': (context) => TelaMySteps(),
+      '/buscar': (context) => TelaPesquisa(),
     },
-
-  )
-  );
+  ));
 }
 
