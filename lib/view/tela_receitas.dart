@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_collection_literals, unused_element, unused_field
+// ignore_for_file: prefer_const_constructors, prefer_collection_literals, unused_element, unused_field, list_remove_unrelated_type
 
 import 'dart:convert';
 
@@ -22,7 +22,7 @@ class _TelaReceitasState extends State<TelaReceitas> {
   List<Receitas> dados = [];
 
   // lista pra armazenar a receita adicionada
-  final List<Receitas> salvos = [];
+  List<Receitas> salvar = [];
 
   //new - armazenar palavras/receitas favoritadas pelo usuario
   //Set<Receitas> salvos = Set<Receitas>();
@@ -37,6 +37,14 @@ class _TelaReceitasState extends State<TelaReceitas> {
         dados.add(Receitas.fromJson(item));
       });
     });
+  }
+
+  adicionarListaFavorito(value){
+    salvar.add(value);
+  }
+
+  removerListaFavorito(value){
+    salvar.remove(value);
   }
 
   @override
@@ -93,7 +101,7 @@ class _TelaReceitasState extends State<TelaReceitas> {
         child: ListView.builder(
             itemCount: dados.length,
             itemBuilder: (context, index) { //percorre e cria uma lista com os nomes das receitas
-              final isFavorito = salvos.contains(dados[index]);
+              final isFavorito = salvar.contains(dados[index]);
               return Card(
                 child: ListTile(
                   title: Text(dados[index].receita),
@@ -108,9 +116,9 @@ class _TelaReceitasState extends State<TelaReceitas> {
                     onPressed: () {
                       setState(() {
                         if (isFavorito){
-                          salvos.remove(dados[index]);
+                          salvar.remove(dados[index]);
                         } else{
-                          salvos.add(dados[index]);
+                          salvar.add(dados[index]);
                         }
                         //Navigator.push(context, MaterialPageRoute(builder: (context) => TelaFavoritos(), settings: RouteSettings(arguments: _salvos[index])));
                       });
