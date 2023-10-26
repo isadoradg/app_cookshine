@@ -12,14 +12,14 @@ class TelaFavoritos extends StatefulWidget {
 
 class _TelaFavoritosState extends State<TelaFavoritos> {
 
-  List<Receitas> _salvos = [];
+  List<Receitas> salvos = [];
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Favoritos', style: TextStyle( color: Colors.black)),
+        title: Center(child: Text('Favoritos', style: TextStyle(color: Colors.black))),
         
         //desativar o botão de voltar do AppBar
         automaticallyImplyLeading: false,
@@ -35,13 +35,13 @@ class _TelaFavoritosState extends State<TelaFavoritos> {
       body: Padding(
         padding: EdgeInsets.all(20),
         child: ListView.builder(
-            itemCount: _salvos.length,
+            itemCount: salvos.length,
             itemBuilder: (context, index) { //percorre e cria uma lista com os nomes das receitas
               return Card(
                 child: ListTile(
-                  title: Text(_salvos[index].receita),
+                  title: Text(salvos[index].receita),
                   onTap: (){
-                    Navigator.pushNamed(context,'/receitas-detalhes', arguments: _salvos[index]);
+                    Navigator.pushNamed(context,'/receitas-detalhes', arguments: salvos[index]);
                   },
                   /*trailing: Icon(
                     jaFoiSalva ? Icons.star_rounded : Icons.star_border_rounded,
